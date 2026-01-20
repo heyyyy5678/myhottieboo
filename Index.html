@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Khari 💖</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 40px;
+      color: #b3005e;
+    }
+    h1 { font-size: 3em; }
+    h2 { font-size: 2em; margin-top: 40px; }
+    p { font-size: 1.3em; margin: 20px 0; }
+    .heart {
+      font-size: 2em;
+      animation: float 2s infinite ease-in-out;
+    }
+    button {
+      font-size: 1.2em;
+      padding: 12px 25px;
+      margin: 15px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+    .yes { background-color: #ff4d6d; color: white; }
+    .no { background-color: #ffd6e0; position: absolute; }
+    .music { background-color: #ff85a2; color: white; }
+    img {
+      width: 300px;
+      border-radius: 15px;
+      margin: 20px;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Khari 💖💖💖</h1>
+<p>From the moment you smiled, my heart said “oh… that’s the one.” 💘</p>
+<p>You’re beautiful, kind, funny, and honestly? My favorite person in the world 🥰</p>
+
+<p class="heart">💗 💕 💗 💕 💗</p>
+
+<!-- PLAY MUSIC BUTTON -->
+<button class="music" onclick="playMusic()">Play our song 💖🎶</button>
+
+<!-- HIDDEN AUDIO ELEMENT -->
+<audio id="bgMusic" loop>
+  <source src="letterhome.mp3" type="audio/mpeg">
+</audio>
+
+<h2>Will you be my Valentine, Khari? 💘</h2>
+<button class="yes" onclick="yesClicked()">YES 💖</button>
+<button class="no" onmouseover="moveButton()">No 🙄</button>
+
+<!-- LONG SCROLLABLE PAGE WITH PICTURES -->
+<h2>My favorite moments with you 💖</h2>
+
+<img src="khari1.jpg" alt="Khari">
+<p>Every time I see your smile, my heart melts 😍</p>
+
+<img src="khari2.jpg" alt="Khari">
+<p>You make every day brighter 🌞💘</p>
+
+<img src="khari3.jpg" alt="Khari">
+<p>Just thinking about you makes me so happy 💕</p>
+
+<img src="khari4.jpg" alt="Khari">
+<p>I love every little thing about you 💖</p>
+
+<img src="khari5.jpg" alt="Khari">
+<p>Scrolling down? I hope your heart feels my love 💖</p>
+
+<script>
+  function playMusic() {
+    const music = document.getElementById("bgMusic");
+    music.play();
+  }
+
+  function yesClicked() {
+    document.body.innerHTML = `
+      <h1>YAYYYYY 💕</h1>
+      <p>
+        Best decision ever 😍<br><br>
+        I can’t wait to make memories with you, laugh with you,
+        and remind you every day how special you are 💖<br><br>
+        Happy Valentine’s Day, Khari 💘💘💘
+      </p>
+    `;
+  }
+
+  function moveButton() {
+    const button = document.querySelector('.no');
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    button.style.left = `${x}px`;
+    button.style.top = `${y}px`;
+  }
+</script>
+
+</body>
+</html>
